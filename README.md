@@ -40,6 +40,14 @@ Simple Webservice for SingleFile
 
 - Run client:
 
+  - Using `curl`:
+
+    ```bash
+    $ curl -d 'url=https://www.wikipedia.org/' http://127.0.0.1:8080
+    ```
+
+  - Using `singlefile-client`:
+
     ```bash
     $ python3 singlefile-client.py
     Usage: singlefile-client.py [OPTIONS] COMMAND [ARGS]...
