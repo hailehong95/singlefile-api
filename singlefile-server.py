@@ -14,7 +14,7 @@ def singlefile():
         url = request.form.get("url")
         if url:
             client = docker.from_env()
-            singlefile_html = client.containers.run(DOCKER_IMAGE, url)
+            singlefile_html = client.containers.run(DOCKER_IMAGE, url, remove=True)
         else:
             return Response("Error: url parameter not found.", status=500)
     except Exception as ex:
